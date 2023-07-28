@@ -1,0 +1,8 @@
+{
+  "name": "Taxoil",
+  "integrations": {
+    "cordova": {},
+    "capacitor": {}
+  },
+  "type": "angular"
+}

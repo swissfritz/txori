@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Unfall</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <p>Bitte machen Sie so viele Aufnahmen wie nötig ("BILD AUFNEHMEN", jedes Foto einzeln
+    bestätigen oder verwerfen), Querformat, mindestens eine mit gut sichtbarem Kennzeichen des Gegnerfahrzeuges.
+    Dann "EMAIL SENDEN", Ihre Email-App auswählen und abschicken.
+  </p>
+  <ion-button fill="outline" color="light" expand="block" (click)="captureImage()">BILD AUFNEHMENn</ion-button>
+  <ion-button fill="outline" color="light" expand="block" (click)="sendMail()">EMAIL SENDEN</ion-button>
+
+  <ion-card>
+    <ion-card-header class="bow">
+      <span>Gegenwärtiges Foto</span>
+      <ion-icon class="center-right" name="arrow-down-sharp"></ion-icon>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-img [src]="cimage" *ngIf="cimage"></ion-img>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
